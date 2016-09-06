@@ -9,7 +9,7 @@ Download the archive mod_wowboss_legion.zip and use the extension manager to ins
 Choose a module position in your template, publish the module and that's it.
 
 
-## Authors
+## Author
 
 * **Quentin Merlot** - [Tolrem](https://github.com/Tolrem)
 
