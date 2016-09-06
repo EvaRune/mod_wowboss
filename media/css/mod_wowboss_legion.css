@@ -1,0 +1,286 @@
+/* ---------- WoW Boss ---------- */
+
+
+/* Helper */
+
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+ 
+.clearfix:after {
+clear: both;
+}
+ 
+.clearfix {
+*zoom: 1;
+} 
+
+
+/* Module Styles */
+#wowboss-legion{
+	box-sizing:border-box;
+	font-size:14px;
+	overflow:hidden;
+}
+
+#wowboss-legion *{
+	box-sizing:border-box;
+}
+
+#wowboss-legion .wbl-raid{
+	background-color:#363636;
+	color:#fff;
+	position:relative;
+	border-bottom:1px solid #000;
+}
+
+
+
+#wowboss-legion .wbl-raid::before{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	content:" ";
+	height:1px;
+	background-color:rgba(255,255,255,0.15);
+	z-index:15;
+}
+
+
+#wowboss-legion .wbl-raid .wbl-title{
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	z-index:1;
+}
+
+/* Raid title */
+#wowboss-legion .wbl-raid .wbl-title .wbl-title-progress{
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	z-index:5;
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+}
+
+#wowboss-legion .wbl-raid .wbl-title h3.wbl-raid-title{
+	color:#fff;
+	margin:0;
+	padding:15px 15px;
+	font-size:1.2em;
+	font-weight:normal;
+	text-shadow:4px 4px 4px rgba(0,0,0,0.75);
+	position:relative;
+	z-index:10;
+	border:none;
+	cursor:pointer;
+}
+
+#wowboss-legion .wbl-raid .wbl-title h3 .wbl-arrow{
+	width:50px;
+	height:100;
+	position:absolute;
+	background-image:url("../img/arrow-right.png");
+	background-size:25px 25px;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	top:0;
+	left:0;
+	bottom:0;
+}
+
+
+#wowboss-legion .wbl-raid .wbl-title h3:hover .wbl-arrow,
+#wowboss-legion .wbl-raid.toggled .wbl-title h3 .wbl-arrow{
+	background-image:url("../img/arrow-bottom.png");
+}
+
+#wowboss-legion .wbl-raid.toggled .wbl-title h3:hover .wbl-arrow{
+	background-image:url("../img/arrow-right.png");
+}
+
+#wowboss-legion .wbl-raid .wbl-title h3 span{
+	vertical-align:middle;
+	display:block;
+	margin-left:30px;
+}
+
+#wowboss-legion .wbl-raid .wbl-title .wbl-progress-bar{
+	position:absolute;
+	height:2px;
+	bottom:0;
+	left:0;
+	width:100%;
+	background:#868686;
+	z-index:15;
+}
+
+#wowboss-legion .wbl-raid .wbl-title .wbl-progress-bar span{
+	display:block;
+	position:absolute;
+	height:2px;
+	top:0;
+	bottom:0;
+	left:0;
+}
+
+	#wowboss-legion .wbl-raid .wbl-title .wbl-progress-bar span.wbl-normal{
+		background-color:#75b938;
+		z-index:2;
+	}
+	
+	#wowboss-legion .wbl-raid .wbl-title .wbl-progress-bar span.wbl-heroic{
+		background-color:#3b5ef3;
+		z-index:3;
+	}
+	
+	#wowboss-legion .wbl-raid .wbl-title .wbl-progress-bar span.wbl-mythic{
+		background-color:#af41e8;
+		z-index:4;
+	}
+
+/* Boss list */
+#wowboss-legion .wbl-raid .wbl-boss-list{
+	margin:0;
+	padding:0;
+	border-top:1px solid #000;
+	overflow:hidden;
+	transform: scaleY(0); 
+	transform-origin: 50% 0; 
+	transition:transform 0.5s ease;
+	height:0;
+}
+
+#wowboss-legion .wbl-raid.toggled .wbl-boss-list{
+	transform: scaleY(1);
+	height:auto;
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss{
+	margin:0;
+	padding:0;
+	line-height:1.2em;
+	position:relative;
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss:nth-child(even){
+	background:rgba(0,0,0,0.03)
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-portrait{
+	width:50px;
+	float:left;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:rgba(0,0,0,0.1);
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	z-index:5;
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-portrait::before{
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:1px;
+	background-color:rgba(255,255,255,0.1);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-portrait::after{
+	content:" ";
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:1px;
+	background-color:rgba(0,0,0,0.75)
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info{
+	margin-left:50px;
+	position:relative;
+	z-index:10;
+	box-shadow:-1px 0 0 rgba(0,0,0,0.3);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info::before{
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:1px;
+	background-color:rgba(255,255,255,0.05);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss:first-child .wbl-boss-info::before{
+	background-color:rgba(255,255,255,0.15);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info::after{
+	content:" ";
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:1px;
+	background-color:rgba(0,0,0,0.2)
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss:last-child .wbl-boss-info::after{
+	content:"";
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info span.wbl-boss-name{
+	text-shadow:1px 1px 0 rgba(0,0,0,0.5);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info small.wbl-boss-status{
+	font-size:0.8em;
+	text-shadow:1px 1px 0 rgba(0,0,0,0.5);
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .bosslink{
+    color:#fff;
+    text-decoration:none;
+    padding:10px 15px;
+    display:block;
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss a.bosslink{
+    background-image:url("../img/link.png");
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+    background-position:90% 50%;
+}
+
+#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss a.bosslink:hover{
+    background-color:rgba(0,0,0,0.1);
+}
+
+	#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info small.wbl-boss-status.wbl-mythic{
+		color:#af41e8;
+	}
+
+	#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info small.wbl-boss-status.wbl-heroic{
+		color:#3b5ef3;
+	}
+	
+	#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info small.wbl-boss-status.wbl-normal{
+		color:#75b938;
+	}
+	
+	#wowboss-legion .wbl-raid .wbl-boss-list .wbl-boss .wbl-boss-info small.wbl-boss-status.wbl-undefeated{
+		color:#868686;
+	}
+
