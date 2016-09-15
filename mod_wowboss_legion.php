@@ -113,6 +113,10 @@ if ($params->get('emerald') == "show"){
     
     array_push($raids, $emerald);
     
+}
+
+if ($params->get('nighthold') == "show"){
+    
     // The Nighthold
     $nightholdbosses = array (
         new LegionBoss (
