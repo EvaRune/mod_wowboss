@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 7.0.0 
+/* WOW BOSS MODULE - LEGION EDITION - 7.1.0 
    ======================================== */
  
 // no direct access
@@ -114,6 +114,52 @@ if ($params->get('emerald') == "show"){
     array_push($raids, $emerald);
     
 }
+
+
+if ($params->get('trial') == "show"){
+    
+    // Trial of Valor
+    $trialbosses = array (
+        new LegionBoss (
+            array(
+                "id" => "odyn",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ODYN'),
+                "status" => $params->get('odyn'),
+                "bosslink" => $params->get('odynlink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "guarm",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_GUARM'),
+                "status" => $params->get('guarm'),
+                "bosslink" => $params->get('guarmlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "helya",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_HELYA'),
+                "status" => $params->get('helya'),
+                "bosslink" => $params->get('helyalink')
+            )
+        )
+    );
+    
+    $trial = new LegionRaid(
+        array(
+            "id" => "trial",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_TRIAL'),
+            "expview" => $params->get('trial-expview'),
+            "bosslist" => $trialbosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $trial);
+    
+}
+
 
 if ($params->get('nighthold') == "show"){
     
