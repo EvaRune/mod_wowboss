@@ -2,7 +2,7 @@
 <extension type="module" version="3.6" client="site" method="upgrade">
 <name>WoW Boss - Legion Edition</name>
 <author>Tolrem</author>
-<version>7.0.0</version>
+<version>7.0.1</version>
 <creationDate>24th Aug 2016</creationDate>
 <description>MOD_WOWBOSS_LEGION_DESC</description>
 

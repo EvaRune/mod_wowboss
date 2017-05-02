@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 7.0.0 
+/* WOW BOSS MODULE - LEGION EDITION - 7.0.1
    ======================================== */
  
 // no direct access
