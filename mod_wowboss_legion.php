@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-/* WOW BOSS MODULE - LEGION EDITION - 7.0.1
-=======
 /* WOW BOSS MODULE - LEGION EDITION - 7.1.0 
->>>>>>> origin/master
    ======================================== */
  
 // no direct access
