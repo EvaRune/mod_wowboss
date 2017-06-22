@@ -5,7 +5,7 @@ This is the repository for the module WoW Boss for Joomla 3.x. This extension di
 ## Installing
 
 You must have Joomla 3.x installed (tested on Joomla 3.6). 
-Download the archive [mod_wowboss_legion.7.1.0.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
+Download the archive [mod_wowboss_legion.7.2.5.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
 Choose a module position in your template and publish the module.
 
 
