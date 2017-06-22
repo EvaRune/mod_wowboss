@@ -19,6 +19,7 @@ Choose a module position in your template and publish the module.
 ## Author
 
 **Quentin Merlot** - [Tolrem](https://github.com/Tolrem)
+
 **Eric Mulder** - (Tomb of Sargeras update)
 
 ## Website
