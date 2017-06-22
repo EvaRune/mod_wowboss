@@ -52,7 +52,7 @@ clear: both;
 
 #wowboss-legion .wbl-raid .wbl-title{
 	background-repeat:no-repeat;
-	background-size:cover;
+    background-position: -100px 10%;
 	position:relative;
 	z-index:1;
 }
@@ -60,7 +60,7 @@ clear: both;
 /* Raid title */
 #wowboss-legion .wbl-raid .wbl-title .wbl-title-progress{
 	background-repeat:no-repeat;
-	background-size:cover;
+    background-position: -100px 10%;
 	position:relative;
 	z-index:5;
 	position:absolute;
