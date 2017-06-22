@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 7.1.0 
+/* WOW BOSS MODULE - LEGION EDITION - 7.2.5 
    ======================================== */
  
 // no direct access
@@ -26,7 +26,7 @@ $version = new JVersion();
 if (version_compare( $version->RELEASE, '2.5', '<=')) {
     if ( $params->get('loadjquery') == "yes" ) {
         $document = JFactory::getDocument();
-        $document->addScript("https://code.jquery.com/jquery-3.1.0.min.js");
+        $document->addScript("https://code.jquery.com/jquery-3.2.1.min.js");
    }
 } else {
     JHtml::_('jquery.framework');
@@ -258,6 +258,99 @@ if ($params->get('nighthold') == "show"){
     );
     
     array_push($raids, $nighthold);
+    
+}
+
+
+if ($params->get('sargeras') == "show"){
+    
+    // Tomb Of Sargeras
+    $sargerasbosses = array (
+        new LegionBoss (
+            array(
+                "id" => "goroth",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_GOROTH'),
+                "status" => $params->get('goroth'),
+                "bosslink" => $params->get('gorothlink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "demonicinquisition",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_DEMONICINQUISITION'),
+                "status" => $params->get('demonicinquisition'),
+                "bosslink" => $params->get('demonicinquisitionlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "harjatan",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_HARJATAN'),
+                "status" => $params->get('harjatan'),
+                "bosslink" => $params->get('harjatanlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "sistersofthemoon",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_SISTERSOFTHEMOON'),
+                "status" => $params->get('sistersofthemoon'),
+                "bosslink" => $params->get('sistersofthemoonlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "mistresssasszine",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MISTRESSSASSZINE'),
+                "status" => $params->get('mistresssasszine'),
+                "bosslink" => $params->get('mistresssasszinelink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "desolatehost",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_DESOLATEHOST'),
+                "status" => $params->get('desolatehost'),
+                "bosslink" => $params->get('desolatehostlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "maidenofvigilance",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MAIDENOFVIGILANCE'),
+                "status" => $params->get('maidenofvigilance'),
+                "bosslink" => $params->get('maidenofvigilancelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "fallenavatar",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_FALLENAVATAR'),
+                "status" => $params->get('fallenavatar'),
+                "bosslink" => $params->get('fallenavatarlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "kiljaeden",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_KILJAEDEN'),
+                "status" => $params->get('kiljaeden'),
+                "bosslink" => $params->get('kiljaedenlink')
+            )
+        )
+    );
+    
+    $sargeras = new LegionRaid(
+        array(
+            "id" => "sargeras",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_SARGERAS'),
+            "expview" => $params->get('sargeras-expview'),
+            "bosslist" => $sargerasbosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $sargeras);
     
 }
 

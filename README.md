@@ -14,10 +14,12 @@ Choose a module position in your template and publish the module.
 * The Emerald Nighmare
 * Trial of Valor
 * The Nighthold
+* Tomb of Sargeras
 
 ## Author
 
 **Quentin Merlot** - [Tolrem](https://github.com/Tolrem)
+**Eric Mulder** - (Tomb of Sargeras update)
 
 ## Website
 
