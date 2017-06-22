@@ -2,7 +2,7 @@
 <extension type="module" version="3.6" client="site" method="upgrade">
 <name>WoW Boss - Legion Edition</name>
 <author>Tolrem</author>
-<version>7.1.0</version>
+<version>7.2.5</version>
 <creationDate>26th Oct 2016</creationDate>
 <description>MOD_WOWBOSS_LEGION_DESC</description>
 
@@ -53,6 +53,10 @@
             <option value="hide">JHIDE</option>
             <option value="show">JSHOW</option>
         </field>
+        <field name="sargeras" type="radio" default="show" label="MOD_WOWBOSS_LEGION_SARGERAS" description="MOD_WOWBOSS_RAID_DESC">
+            <option value="hide">JHIDE</option>
+            <option value="show">JSHOW</option>
+        </field>
 		<field type="spacer" name="myspacer" hr="true" />
         <field name="emerald-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_EMERALD_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
@@ -66,171 +70,239 @@
             <option value="no">JNO</option>
             <option value="yes">JYES</option>
         </field>
-
+        <field name="sargeras-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_SARGERAS_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
+            <option value="no">JNO</option>
+            <option value="yes">JYES</option>
+        </field>
 	</fieldset>
     
-    <fieldset name="MOD_WOWBOSS_LEGION_EMERALD">
-        <field name="nythendra" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_NYTHENDRA" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="renferal" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_RENFERAL" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="ilgynoth" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ILGYNOTH" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="ursoc" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_URSOC" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="dragons" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_DRAGONS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="cenarius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_CENARIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="xavius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_XAVIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        
+  <fieldset name="MOD_WOWBOSS_LEGION_EMERALD">
+      <field name="nythendra" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_NYTHENDRA" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="renferal" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_RENFERAL" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="ilgynoth" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ILGYNOTH" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="ursoc" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_URSOC" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="dragons" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_DRAGONS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="cenarius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_CENARIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="xavius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_XAVIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
 
-        <field name="nythendralink" type="text" default="" label="MOD_WOWBOSS_LEGION_NYTHENDRA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="renferallink" type="text" default="" label="MOD_WOWBOSS_LEGION_RENFERAL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="ilgynothlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ILGYNOTH_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="ursoclink" type="text" default="" label="MOD_WOWBOSS_LEGION_URSOC_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="dragonslink" type="text" default="" label="MOD_WOWBOSS_LEGION_DRAGONS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="cenariuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_CENARIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="xaviuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_XAVIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-
-        
-    </fieldset>
+      <field name="nythendralink" type="text" default="" label="MOD_WOWBOSS_LEGION_NYTHENDRA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="renferallink" type="text" default="" label="MOD_WOWBOSS_LEGION_RENFERAL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="ilgynothlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ILGYNOTH_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="ursoclink" type="text" default="" label="MOD_WOWBOSS_LEGION_URSOC_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="dragonslink" type="text" default="" label="MOD_WOWBOSS_LEGION_DRAGONS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="cenariuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_CENARIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="xaviuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_XAVIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" /> 
+  </fieldset>
     
     
     
-    <fieldset name="MOD_WOWBOSS_LEGION_TRIAL">
-        <field name="odyn" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ODYN" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="guarm" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GUARM" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="helya" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HELYA" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
+  <fieldset name="MOD_WOWBOSS_LEGION_TRIAL">
+      <field name="odyn" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ODYN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="guarm" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GUARM" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="helya" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HELYA" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
 
-        <field name="odynlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ODYN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="guarmlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GUARM_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="helyalink" type="text" default="" label="MOD_WOWBOSS_LEGION_HELYA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-
-    </fieldset> 
+      <field name="odynlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ODYN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="guarmlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GUARM_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="helyalink" type="text" default="" label="MOD_WOWBOSS_LEGION_HELYA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+  </fieldset> 
     
 
     
-    <fieldset name="MOD_WOWBOSS_LEGION_NIGHTHOLD">
-        <field name="skorpyron" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_SKORPYRON" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="anomaly" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ANOMALY" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="trilliax" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TRILLIAX" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="aluriel" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ALURIEL" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="telarn" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TELARN" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="etraeus" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ETRAEUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="tichondrius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TICHONDRIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="krosus" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_KROSUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="elisande" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ELISANDE" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        <field name="guldan" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GULDAN" description="MOD_WOWBOSS_BOSS_OPTIONS">
-            <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
-            <option value="normal">MOD_WOWBOSS_NORMAL</option>
-            <option value="heroic">MOD_WOWBOSS_HEROIC</option>
-            <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
-        </field>
-        
+  <fieldset name="MOD_WOWBOSS_LEGION_NIGHTHOLD">
+      <field name="skorpyron" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_SKORPYRON" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="anomaly" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ANOMALY" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="trilliax" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TRILLIAX" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="aluriel" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ALURIEL" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="telarn" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TELARN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="etraeus" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ETRAEUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="tichondrius" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TICHONDRIUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="krosus" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_KROSUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="elisande" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ELISANDE" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="guldan" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GULDAN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
 
-        <field name="skorpyronlink" type="text" default="" label="MOD_WOWBOSS_LEGION_SKORPYRON_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="anomalylink" type="text" default="" label="MOD_WOWBOSS_LEGION_ANOMALY_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="trilliaxlink" type="text" default="" label="MOD_WOWBOSS_LEGION_TRILLIAX_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="aluriellink" type="text" default="" label="MOD_WOWBOSS_LEGION_ALURIEL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="telarnlink" type="text" default="" label="MOD_WOWBOSS_LEGION_TELARN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="etraeuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_ETRAEUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="tichondriuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_TICHONDRIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="krosuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_KROSUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="elisandelink" type="text" default="" label="MOD_WOWBOSS_LEGION_ELISANDE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-        <field name="guldanlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GULDAN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="skorpyronlink" type="text" default="" label="MOD_WOWBOSS_LEGION_SKORPYRON_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="anomalylink" type="text" default="" label="MOD_WOWBOSS_LEGION_ANOMALY_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="trilliaxlink" type="text" default="" label="MOD_WOWBOSS_LEGION_TRILLIAX_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="aluriellink" type="text" default="" label="MOD_WOWBOSS_LEGION_ALURIEL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="telarnlink" type="text" default="" label="MOD_WOWBOSS_LEGION_TELARN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="etraeuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_ETRAEUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="tichondriuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_TICHONDRIUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="krosuslink" type="text" default="" label="MOD_WOWBOSS_LEGION_KROSUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="elisandelink" type="text" default="" label="MOD_WOWBOSS_LEGION_ELISANDE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="guldanlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GULDAN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+  </fieldset>  
+    
+    
+    
+  <fieldset name="MOD_WOWBOSS_LEGION_SARGERAS">
+      <field name="goroth" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GOROTH" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="demonicinquisition" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_DEMONICINQUISITION" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="harjatan" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HARJATAN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="sistersofthemoon" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_SISTERSOFTHEMOON" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="mistresssasszine" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_MISTRESSSASSZINE" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="desolatehost" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_DESOLATEHOST" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="maidenofvigilance" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_MAIDENOFVIGILANCE" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="fallenavatar" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_FALLENAVATAR" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="kiljaeden" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_KILJAEDEN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
 
-        
-    </fieldset>  
+      <field name="gorothlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GOROTH_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="demonicinquisitionlink" type="text" default="" label="MOD_WOWBOSS_LEGION_DEMONICINQUISITION_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="harjatanlink" type="text" default="" label="MOD_WOWBOSS_LEGION_HARJATAN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="sistersofthemoonlink" type="text" default="" label="MOD_WOWBOSS_LEGION_SISTERSOFTHEMOON_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="mistresssasszinelink" type="text" default="" label="MOD_WOWBOSS_LEGION_MISTRESSSASSZINE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="desolatehostlink" type="text" default="" label="MOD_WOWBOSS_LEGION_DESOLATEHOST_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="maidenofvigilancelink" type="text" default="" label="MOD_WOWBOSS_LEGION_MAIDENOFVIGILANCE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="fallenavatarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_FALLENAVATAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="kiljaedenlink" type="text" default="" label="MOD_WOWBOSS_LEGION_KILJAEDEN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />   
+  </fieldset>
 	
 	
 	<fieldset name="advanced">
