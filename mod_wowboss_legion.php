@@ -33,7 +33,7 @@ if (version_compare( $version->RELEASE, '2.5', '<=')) {
 }
 
 // Loading JS
-$document->addScript('/media/mod_wowboss_legion/js/mod_wowboss_legion.js');
+$document->addScript(JURI::base() .'/media/mod_wowboss_legion/js/mod_wowboss_legion.js');
 
 
 // Creating raids array
