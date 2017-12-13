@@ -2,7 +2,7 @@
 <extension type="module" version="3.6" client="site" method="upgrade">
 <name>WoW Boss - Legion Edition</name>
 <author>Tolrem</author>
-<version>7.2.5</version>
+<version>7.3.5</version>
 <creationDate>26th Oct 2016</creationDate>
 <description>MOD_WOWBOSS_LEGION_DESC</description>
 
@@ -57,6 +57,10 @@
             <option value="hide">JHIDE</option>
             <option value="show">JSHOW</option>
         </field>
+        <field name="antorus" type="radio" default="show" label="MOD_WOWBOSS_LEGION_ANTORUS" description="MOD_WOWBOSS_RAID_DESC">
+            <option value="hide">JHIDE</option>
+            <option value="show">JSHOW</option>
+        </field>
 		<field type="spacer" name="myspacer" hr="true" />
         <field name="emerald-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_EMERALD_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
@@ -71,6 +75,10 @@
             <option value="yes">JYES</option>
         </field>
         <field name="sargeras-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_SARGERAS_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
+            <option value="no">JNO</option>
+            <option value="yes">JYES</option>
+        </field>
+        <field name="antorus-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_ANTORUS_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
             <option value="yes">JYES</option>
         </field>
@@ -302,6 +310,90 @@
       <field name="maidenofvigilancelink" type="text" default="" label="MOD_WOWBOSS_LEGION_MAIDENOFVIGILANCE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="fallenavatarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_FALLENAVATAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="kiljaedenlink" type="text" default="" label="MOD_WOWBOSS_LEGION_KILJAEDEN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />   
+  </fieldset>
+    
+  
+  
+  <fieldset name="MOD_WOWBOSS_LEGION_ANTORUS">
+      <field name="garothi" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GAROTHI" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="felhounds" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_FELHOUNDS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="highcommand" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HIGH_COMMAND" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="hasabel" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HASABEL" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="eonar" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_EONAR" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="imonar" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_IMONAR" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="kingaroth" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_KINGAROTH" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="varimathras" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_VARIMATHRAS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="shivarra" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_SHIVARRA" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="aggramar" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_AGGRAMAR" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="argus" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ARGUS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
+
+      <field name="garothilink" type="text" default="" label="MOD_WOWBOSS_LEGION_GAROTHI_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="felhoundslink" type="text" default="" label="MOD_WOWBOSS_LEGION_FELHOUNDS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="highcommandlink" type="text" default="" label="MOD_WOWBOSS_LEGION_HIGH_COMMAND_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="hasabellink" type="text" default="" label="MOD_WOWBOSS_LEGION_HASABEL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="eonarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_EONAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="imonarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_IMONAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="kingarothlink" type="text" default="" label="MOD_WOWBOSS_LEGION_KINGAROTH_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="varimathraslink" type="text" default="" label="MOD_WOWBOSS_LEGION_VARIMATHRAS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="shivarralink" type="text" default="" label="MOD_WOWBOSS_LEGION_SHIVARRA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />  
+      <field name="aggramarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_AGGRAMAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="arguslink" type="text" default="" label="MOD_WOWBOSS_LEGION_ARGUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />   
   </fieldset>
 	
 	
