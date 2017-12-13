@@ -354,6 +354,115 @@ if ($params->get('sargeras') == "show"){
     
 }
 
+
+if ($params->get('antorus') == "show"){
+    
+    // Antorus
+    $antorusbosses = array (
+        new LegionBoss (
+            array(
+                "id" => "garothi",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_GAROTHI'),
+                "status" => $params->get('garothi'),
+                "bosslink" => $params->get('garothilink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "felhounds",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_FELHOUNDS'),
+                "status" => $params->get('felhounds'),
+                "bosslink" => $params->get('felhoundslink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "highcommand",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_HIGH_COMMAND'),
+                "status" => $params->get('highcommand'),
+                "bosslink" => $params->get('highcommandlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "hasabel",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_HASABEL'),
+                "status" => $params->get('hasabel'),
+                "bosslink" => $params->get('hasabellink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "eonar",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_EONAR'),
+                "status" => $params->get('eonar'),
+                "bosslink" => $params->get('eonarlink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "imonar",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_IMONAR'),
+                "status" => $params->get('imonar'),
+                "bosslink" => $params->get('imonarlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "kingaroth",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_KINGAROTH'),
+                "status" => $params->get('kingaroth'),
+                "bosslink" => $params->get('kingarothlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "varimathras",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_VARIMATHRAS'),
+                "status" => $params->get('varimathras'),
+                "bosslink" => $params->get('varimathraslink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "shivarra",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_SHIVARRA'),
+                "status" => $params->get('shivarra'),
+                "bosslink" => $params->get('shivarralink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "aggramar",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_AGGRAMAR'),
+                "status" => $params->get('aggramar'),
+                "bosslink" => $params->get('aggramarlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "argus",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ARGUS'),
+                "status" => $params->get('argus'),
+                "bosslink" => $params->get('arguslink')
+            )
+        )
+    );
+    
+    $antorus = new LegionRaid(
+        array(
+            "id" => "antorus",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_ANTORUS'),
+            "expview" => $params->get('antorus-expview'),
+            "bosslist" => $antorusbosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $antorus);
+    
+}
+
 require( JModuleHelper::getLayoutPath('mod_wowboss_legion'));
 
 
