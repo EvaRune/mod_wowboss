@@ -4,8 +4,8 @@ This is the repository for the module WoW Boss for Joomla 3.x. This extension di
 
 ## Installing
 
-You must have Joomla 3.x installed (tested on Joomla 3.6). 
-Download the archive [mod_wowboss_legion.7.2.5.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
+You must have Joomla 3.x installed (tested on Joomla 3.8). 
+Download the archive [mod_wowboss_legion.7.3.0.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
 Choose a module position in your template and publish the module.
 
 
@@ -15,6 +15,7 @@ Choose a module position in your template and publish the module.
 * Trial of Valor
 * The Nighthold
 * Tomb of Sargeras
+* Antorus, the Burning Throne
 
 ## Author
 
