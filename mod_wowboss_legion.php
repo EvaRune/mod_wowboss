@@ -462,6 +462,90 @@ if ($params->get('antorus') == "show"){
     array_push($raids, $antorus);
     
 }
+//****uldir
+if ($params->get('uldir') == "show"){
+    
+    // Uldir
+    $uldirbosses = array (
+        new LegionBoss (
+            array(
+                "id" => "taloc",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_TALOC'),
+                "status" => $params->get('taloc'),
+                "bosslink" => $params->get('taloclink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "mother",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MOTHER'),
+                "status" => $params->get('mother'),
+                "bosslink" => $params->get('motherlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "fetid",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_FETID'),
+                "status" => $params->get('fetid'),
+                "bosslink" => $params->get('fetidlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "zekvoz",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ZEKVOZ'),
+                "status" => $params->get('zekvoz'),
+                "bosslink" => $params->get('zekvozlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "vectis",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_VECTIS'),
+                "status" => $params->get('vectis'),
+                "bosslink" => $params->get('vectislink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "zul",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ZUL'),
+                "status" => $params->get('zul'),
+                "bosslink" => $params->get('zullink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "mythrax",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MYTHRAX'),
+                "status" => $params->get('mythrax'),
+                "bosslink" => $params->get('mythraxlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "ghuun",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_GHUUN'),
+                "status" => $params->get('ghuun'),
+                "bosslink" => $params->get('ghuunlink')
+            )
+        )
+    );
+    
+    $uldir = new LegionRaid(
+        array(
+            "id" => "uldir",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_ULDIR'),
+            "expview" => $params->get('uldir-expview'),
+            "bosslist" => $uldirbosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $uldir);
+    
+}
 
 require( JModuleHelper::getLayoutPath('mod_wowboss_legion'));
 

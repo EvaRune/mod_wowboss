@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <extension type="module" version="3.6" client="site" method="upgrade">
-<name>WoW Boss - Legion Edition</name>
+<name>WoW Boss - Legion + BFA Edition</name>
 <author>Tolrem</author>
-<version>7.3.5</version>
+<version>8.0.0</version>
 <creationDate>26th Oct 2016</creationDate>
 <description>MOD_WOWBOSS_LEGION_DESC</description>
 
@@ -61,6 +61,10 @@
             <option value="hide">JHIDE</option>
             <option value="show">JSHOW</option>
         </field>
+        <field name="uldir" type="radio" default="show" label="MOD_WOWBOSS_LEGION_ULDIR" description="MOD_WOWBOSS_RAID_DESC">
+            <option value="hide">JHIDE</option>
+            <option value="show">JSHOW</option>
+        </field>
 		<field type="spacer" name="myspacer" hr="true" />
         <field name="emerald-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_EMERALD_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
@@ -79,6 +83,10 @@
             <option value="yes">JYES</option>
         </field>
         <field name="antorus-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_ANTORUS_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
+            <option value="no">JNO</option>
+            <option value="yes">JYES</option>
+        </field>
+        <field name="uldir-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_ULDIR_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
             <option value="yes">JYES</option>
         </field>
@@ -395,6 +403,69 @@
       <field name="aggramarlink" type="text" default="" label="MOD_WOWBOSS_LEGION_AGGRAMAR_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="arguslink" type="text" default="" label="MOD_WOWBOSS_LEGION_ARGUS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />   
   </fieldset>
+    
+    
+  <fieldset name="MOD_WOWBOSS_LEGION_ULDIR">
+      <field name="taloc" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_TALOC" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="mother" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_MOTHER" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="fetid" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HIGH_FETID" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="zekvoz" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ZEKVOZ" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="vectis" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_VECTIS" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="zul" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_ZUL" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="mythrax" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_MYTHRAX" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
+      <field name="ghuun" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_GHUUN" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
+
+      <field name="taloclink" type="text" default="" label="MOD_WOWBOSS_LEGION_TALOC_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="motherlink" type="text" default="" label="MOD_WOWBOSS_LEGION_MOTHER_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="fetidlink" type="text" default="" label="MOD_WOWBOSS_LEGION_HIGH_FETID_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="zekvozlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ZEKVOZ_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="vectislink" type="text" default="" label="MOD_WOWBOSS_LEGION_VECTIS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="zullink" type="text" default="" label="MOD_WOWBOSS_LEGION_ZUL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="mythraxlink" type="text" default="" label="MOD_WOWBOSS_LEGION_MYTHRAX_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="ghuunlink" type="text" default="" label="MOD_WOWBOSS_LEGION_GHUUN_LINK" description="MOD_WOWBOSS_BOSS_LINK" />  
+  </fieldset>    
 	
 	
 	<fieldset name="advanced">
