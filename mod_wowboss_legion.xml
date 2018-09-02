@@ -418,7 +418,7 @@
           <option value="heroic">MOD_WOWBOSS_HEROIC</option>
           <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
       </field>
-      <field name="fetid" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_HIGH_FETID" description="MOD_WOWBOSS_BOSS_OPTIONS">
+      <field name="fetid" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_FETID" description="MOD_WOWBOSS_BOSS_OPTIONS">
           <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
           <option value="normal">MOD_WOWBOSS_NORMAL</option>
           <option value="heroic">MOD_WOWBOSS_HEROIC</option>
@@ -459,7 +459,7 @@
 
       <field name="taloclink" type="text" default="" label="MOD_WOWBOSS_LEGION_TALOC_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="motherlink" type="text" default="" label="MOD_WOWBOSS_LEGION_MOTHER_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
-      <field name="fetidlink" type="text" default="" label="MOD_WOWBOSS_LEGION_HIGH_FETID_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="fetidlink" type="text" default="" label="MOD_WOWBOSS_LEGION_FETID_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="zekvozlink" type="text" default="" label="MOD_WOWBOSS_LEGION_ZEKVOZ_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="vectislink" type="text" default="" label="MOD_WOWBOSS_LEGION_VECTIS_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="zullink" type="text" default="" label="MOD_WOWBOSS_LEGION_ZUL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
