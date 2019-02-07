@@ -590,7 +590,7 @@ if ($params->get('dazar') == "show"){
             array(
                 "id" => "conclave",
                 "name" => JText::_('MOD_WOWBOSS_LEGION_CONCLAVE'),
-                "status" => $params->get('conclaves'),
+                "status" => $params->get('conclave'),
                 "bosslink" => $params->get('conclavelink')
             )
         ),  
