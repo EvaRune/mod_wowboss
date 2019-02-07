@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 7.3.0 
+/* WOW BOSS MODULE - LEGION EDITION - 8.1.0
    ======================================== */
  
 // no direct access
@@ -462,7 +462,8 @@ if ($params->get('antorus') == "show"){
     array_push($raids, $antorus);
     
 }
-//****uldir
+
+
 if ($params->get('uldir') == "show"){
     
     // Uldir
@@ -544,6 +545,102 @@ if ($params->get('uldir') == "show"){
     );
     
     array_push($raids, $uldir);
+    
+    
+    
+}
+
+if ($params->get('dazar') == "show"){
+    
+    // Battle of Dazar'Alor
+    $dazarbosses = array (
+        new LegionBoss (
+            array(
+                "id" => "champion",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_CHAMPION'),
+                "status" => $params->get('champion'),
+                "bosslink" => $params->get('championlink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "jadefire",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_JADEFIRE'),
+                "status" => $params->get('jadefire'),
+                "bosslink" => $params->get('jadefirelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "grong",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_GRONG'),
+                "status" => $params->get('grong'),
+                "bosslink" => $params->get('gronglink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "opulence",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_OPULENCE'),
+                "status" => $params->get('opulence'),
+                "bosslink" => $params->get('opulencelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "conclave",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_CONCLAVE'),
+                "status" => $params->get('conclaves'),
+                "bosslink" => $params->get('conclavelink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "rastakhan",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_RASTAKHAN'),
+                "status" => $params->get('rastakhan'),
+                "bosslink" => $params->get('rastakhanlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "mekkatorque",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MEKKATORQUE'),
+                "status" => $params->get('mekkatorque'),
+                "bosslink" => $params->get('mekkatorquelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "blockade",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_BLOCKADE'),
+                "status" => $params->get('blockade'),
+                "bosslink" => $params->get('blockadelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "jaina",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_JAINA'),
+                "status" => $params->get('jaina'),
+                "bosslink" => $params->get('jainalink')
+            )
+        )
+    );
+    
+    $dazar = new LegionRaid(
+        array(
+            "id" => "dazar",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_DAZAR'),
+            "expview" => $params->get('dazar-expview'),
+            "bosslist" => $dazarbosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $dazar);
+    
+    
     
 }
 
