@@ -2,7 +2,7 @@
 <extension type="module" version="3.6" client="site" method="upgrade">
 <name>WoW Boss - Legion + BFA Edition</name>
 <author>Tolrem</author>
-<version>8.1.0</version>
+<version>8.1.5</version>
 <creationDate>26th Oct 2016</creationDate>
 <description>MOD_WOWBOSS_LEGION_DESC</description>
 
@@ -69,6 +69,10 @@
             <option value="hide">JHIDE</option>
             <option value="show">JSHOW</option>
         </field>
+        <field name="crucible" type="radio" default="show" label="MOD_WOWBOSS_LEGION_CRUCIBLE" description="MOD_WOWBOSS_RAID_DESC">
+            <option value="hide">JHIDE</option>
+            <option value="show">JSHOW</option>
+        </field>
 		<field type="spacer" name="myspacer" hr="true" />
         <field name="emerald-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_EMERALD_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
@@ -95,6 +99,10 @@
             <option value="yes">JYES</option>
         </field>
         <field name="dazar-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_DAZAR_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
+            <option value="no">JNO</option>
+            <option value="yes">JYES</option>
+        </field>
+        <field name="crucible-expview" type="radio" default="yes" label="MOD_WOWBOSS_LEGION_CRUCIBLE_TOGGLE" description="MOD_WOWBOSS_TOGGLE_DESC">
             <option value="no">JNO</option>
             <option value="yes">JYES</option>
         </field>
@@ -541,6 +549,24 @@
       <field name="mekkatorquelink" type="text" default="" label="MOD_WOWBOSS_LEGION_MEKKATORQUE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
       <field name="blockadelink" type="text" default="" label="MOD_WOWBOSS_LEGION_BLOCKADE_LINK" description="MOD_WOWBOSS_BOSS_LINK" />  
       <field name="jainalink" type="text" default="" label="MOD_WOWBOSS_LEGION_JAINA_LINK" description="MOD_WOWBOSS_BOSS_LINK" />  
+    </fieldset>
+    
+    <fieldset name="MOD_WOWBOSS_LEGION_CRUCIBLE">
+      <field name="cabal" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_CABAL" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      <field name="uunat" type="list" default="undefeated" label="MOD_WOWBOSS_LEGION_UUNAT" description="MOD_WOWBOSS_BOSS_OPTIONS">
+          <option value="undefeated">MOD_WOWBOSS_UNDEFEATED</option>
+          <option value="normal">MOD_WOWBOSS_NORMAL</option>
+          <option value="heroic">MOD_WOWBOSS_HEROIC</option>
+          <option value="mythic">MOD_WOWBOSS_MYTHIC</option>
+      </field>
+      
+      <field name="caballink" type="text" default="" label="MOD_WOWBOSS_LEGION_CABAL_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
+      <field name="uunatlink" type="text" default="" label="MOD_WOWBOSS_LEGION_UUNAT_LINK" description="MOD_WOWBOSS_BOSS_LINK" />
     </fieldset>
 	
 	

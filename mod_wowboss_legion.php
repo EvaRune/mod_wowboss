@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 8.1.0
+/* WOW BOSS MODULE - LEGION EDITION - 8.1.5
    ======================================== */
  
 // no direct access
@@ -639,6 +639,45 @@ if ($params->get('dazar') == "show"){
     );
     
     array_push($raids, $dazar);
+    
+    
+    
+}
+
+
+if ($params->get('crucible') == "show"){
+    
+    // Crucible of Storms
+    $cruciblebosses = array (
+        new LegionBoss (
+            array(
+                "id" => "cabal",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_CABAL'),
+                "status" => $params->get('cabal'),
+                "bosslink" => $params->get('caballink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "uunat",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_UUNAT'),
+                "status" => $params->get('uunat'),
+                "bosslink" => $params->get('uunatlink')
+            )
+        )
+    );
+    
+    $crucible = new LegionRaid(
+        array(
+            "id" => "crucible",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_CRUCIBLE'),
+            "expview" => $params->get('crucible-expview'),
+            "bosslist" => $cruciblebosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $crucible);
     
     
     
