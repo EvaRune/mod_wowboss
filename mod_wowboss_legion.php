@@ -1,6 +1,6 @@
 <?php
 
-/* WOW BOSS MODULE - LEGION EDITION - 8.1.5
+/* WOW BOSS MODULE - LEGION EDITION - 8.2.0
    ======================================== */
  
 // no direct access
@@ -678,6 +678,94 @@ if ($params->get('crucible') == "show"){
     );
     
     array_push($raids, $crucible);
+    
+    
+    
+}
+
+
+
+if ($params->get('palace') == "show"){
+    
+    // The Eternal Palace
+    $palacebosses = array (
+        new LegionBoss (
+            array(
+                "id" => "sivara",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_SIVARA'),
+                "status" => $params->get('sivara'),
+                "bosslink" => $params->get('sivaralink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "behemoth",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_BEHEMOTH'),
+                "status" => $params->get('behemoth'),
+                "bosslink" => $params->get('behemothlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "radiance",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_RADIANCE'),
+                "status" => $params->get('radiance'),
+                "bosslink" => $params->get('radiancelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "ashvane",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ASHVANE'),
+                "status" => $params->get('ashvane'),
+                "bosslink" => $params->get('ashvanelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "orgozoa",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ORGOZOA'),
+                "status" => $params->get('orgozoa'),
+                "bosslink" => $params->get('orgozoalink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "court",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_COURT'),
+                "status" => $params->get('court'),
+                "bosslink" => $params->get('courtlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "zaqul",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ZAQUL'),
+                "status" => $params->get('zaqul'),
+                "bosslink" => $params->get('zaqullink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "azshara",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_AZSHARA'),
+                "status" => $params->get('azshara'),
+                "bosslink" => $params->get('azsharalink')
+            )
+        )
+    );
+    
+    $palace = new LegionRaid(
+        array(
+            "id" => "palace",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_PALACE'),
+            "expview" => $params->get('palace-expview'),
+            "bosslist" => $palacebosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $palace);
     
     
     
