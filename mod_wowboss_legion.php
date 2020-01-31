@@ -771,6 +771,126 @@ if ($params->get('palace') == "show"){
     
 }
 
+
+
+if ($params->get('nyalotha') == "show"){
+    
+    // Ny'alotha, the Waking City
+    $nyalothabosses = array (
+        new LegionBoss (
+            array(
+                "id" => "wrathion",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_WRATHION'),
+                "status" => $params->get('wrathion'),
+                "bosslink" => $params->get('wrathionlink'),
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "maut",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_MAUT'),
+                "status" => $params->get('maut'),
+                "bosslink" => $params->get('mautlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "skitra",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_SKITRA'),
+                "status" => $params->get('skitra'),
+                "bosslink" => $params->get('skitralink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "xanesh",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_XANESH'),
+                "status" => $params->get('xanesh'),
+                "bosslink" => $params->get('xaneshlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "hivemind",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_HIVEMIND'),
+                "status" => $params->get('hivemind'),
+                "bosslink" => $params->get('hivemindlink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "shadhar",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_SHADHAR'),
+                "status" => $params->get('shadhar'),
+                "bosslink" => $params->get('shadharlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "drestagath",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_DRESTAGATH'),
+                "status" => $params->get('drestagath'),
+                "bosslink" => $params->get('drestagathlink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "ilgynothbfa",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_ILGYNOTHBFA'),
+                "status" => $params->get('ilgynothbfa'),
+                "bosslink" => $params->get('ilgynothbfalink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "vexiona",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_VEXIONA'),
+                "status" => $params->get('vexiona'),
+                "bosslink" => $params->get('vexionalink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "raden",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_RADEN'),
+                "status" => $params->get('raden'),
+                "bosslink" => $params->get('radenlink')
+            )
+        ),  
+        new LegionBoss (
+            array(
+                "id" => "carapace",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_CARAPACE'),
+                "status" => $params->get('carapace'),
+                "bosslink" => $params->get('carapacelink')
+            )
+        ),
+        new LegionBoss (
+            array(
+                "id" => "nzoth",
+                "name" => JText::_('MOD_WOWBOSS_LEGION_NZOTH'),
+                "status" => $params->get('nzoth'),
+                "bosslink" => $params->get('nzothlink')
+            )
+        )
+    );
+    
+    $nyalotha = new LegionRaid(
+        array(
+            "id" => "nyalotha",
+            "name" => JText::_('MOD_WOWBOSS_LEGION_NYALOTHA'),
+            "expview" => $params->get('nyalotha-expview'),
+            "bosslist" => $nyalothabosses,
+            "mediaurl" => $module_media_url
+        )
+    );
+    
+    array_push($raids, $nyalotha);
+    
+    
+    
+}
+
 require( JModuleHelper::getLayoutPath('mod_wowboss_legion'));
 
 

@@ -5,7 +5,7 @@ This is the repository for the module WoW Boss for Joomla 3.x. This extension di
 ## Installing
 
 You must have Joomla 3.x installed (tested on Joomla 3.8). 
-Download the archive [mod_wowboss_legion_bfa.8.2.0.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
+Download the archive [mod_wowboss_legion_bfa.8.3.0.zip](http://www.tolrem.net/download/97/) and use the extension manager to install the module on your website. 
 Choose a module position in your template and publish the module.
 
 
@@ -23,6 +23,7 @@ Choose a module position in your template and publish the module.
 * Battle of Dazar'alor
 * Crucible of Storms
 * The Eternal Palace
+* Ny'alotha, the Waking City
 
 ## Author
 
